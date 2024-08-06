@@ -29,3 +29,26 @@ Para uma transferência de arquivos mais segura, considere o uso de protocolos q
 - **FTPS (FTP Secure)**
 
 Esses protocolos oferecem criptografia tanto para a comunicação quanto para os dados transferidos, protegendo suas informações contra interceptações e ataques.
+
+## Exemplos
+
+### Sniffing com `tcpdump`
+
+Para ilustrar a vulnerabilidade do FTP, podemos usar duas máquinas virtuais para simular uma conexão FTP e capturar o tráfego usando `tcpdump`.
+
+1. **Prepare as Máquinas**: Verifique os IPs das máquinas e teste a conexão entre elas com o comando `ping`.
+
+2. **Captura de Tráfego**:
+   Em uma das máquinas, execute o seguinte comando para capturar o tráfego FTP:
+   ```bash
+   tcpdump -i enp0s3 -vv -w flag.pcap tcp port ftp or port ftp-data
+  ```bash
+  -i enp0s3: Interface de rede utilizada.
+  -vv: Modo verbose para mais detalhes.
+  -w flag.pcap: Cria um arquivo com a extensão .pcap para análise posterior no Wireshark.
+  tcp port ftp or port ftp-data: Captura tráfego nos protocolos e portas FTP.
+
+<div>
+    <img src="caminho-para-sua-imagem1.png" alt="Descrição da Imagem 1" width="600">
+    <img src="caminho-para-sua-imagem2.png" alt="Descrição da Imagem 2" width="600">
+</div>
