@@ -48,5 +48,5 @@ Para ilustrar a vulnerabilidade do FTP, podemos usar duas máquinas virtuais par
 <a href="https://github.com/GuilhermeNobrega/Vulnerabilidades-do-ftp/blob/main/pictures/Capturar.PNG">Máquina servidor</a><br>
 <a href="https://github.com/GuilhermeNobrega/Vulnerabilidades-do-ftp/blob/main/pictures/Capturar1.PNG">Máquina cliente que faz conexão</a>
 
-2. **Visualização dados wireshark!**:
+3. **Visualização dados wireshark!**:
    Em seu wireshark, abra o arquivo pcap e veja os pacotes (tcp e ftp se tiver ftp-data caso queira dar um get em algo no servidor para baixar em sua máquina local)
