@@ -47,8 +47,7 @@ Para ilustrar a vulnerabilidade do FTP, podemos usar duas máquinas virtuais par
   -vv: Modo verbose para mais detalhes.
   -w flag.pcap: Cria um arquivo com a extensão .pcap para análise posterior no Wireshark.
   tcp port ftp or port ftp-data: Captura tráfego nos protocolos e portas FTP.
+```
 
-<div>
-    <img src="caminho-para-sua-imagem1.png" alt="Descrição da Imagem 1" width="600">
-    <img src="caminho-para-sua-imagem2.png" alt="Descrição da Imagem 2" width="600">
-</div>
+<p align="center">
+<img src="https://pa1.narvii.com/6565/853c9e5856133a921e36ae9fc01d1f05abde7709_00.gif" height="100" width="100">
