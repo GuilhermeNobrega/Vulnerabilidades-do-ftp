@@ -1,7 +1,4 @@
 # Problemas e Vulnerabilidades do FTP
-
-Este documento explica as principais vulnerabilidades associadas ao FTP (File Transfer Protocol) e por que ele não é a melhor opção para a transferência segura de arquivos.
-
 ## Introdução
 
 O FTP é um protocolo amplamente utilizado para a transferência de arquivos entre sistemas. No entanto, ele possui sérias deficiências de segurança, principalmente devido à sua transmissão de dados em texto simples. Isso expõe as informações sensíveis a diversos tipos de ataques.
@@ -30,9 +27,9 @@ Para uma transferência de arquivos mais segura, considere o uso de protocolos q
 
 Esses protocolos oferecem criptografia tanto para a comunicação quanto para os dados transferidos, protegendo suas informações contra interceptações e ataques.
 
-## Exemplos
+## Exemplos:
 
-### Sniffing com `tcpdump`
+### 1) Sniffing com `tcpdump`
 
 Para ilustrar a vulnerabilidade do FTP, podemos usar duas máquinas virtuais para simular uma conexão FTP e capturar o tráfego usando `tcpdump`.
 
@@ -48,6 +45,8 @@ Para ilustrar a vulnerabilidade do FTP, podemos usar duas máquinas virtuais par
   -w flag.pcap: Cria um arquivo com a extensão .pcap para análise posterior no Wireshark.
   tcp port ftp or port ftp-data: Captura tráfego nos protocolos e portas FTP.
 ```
+<a href="https://github.com/GuilhermeNobrega/Vulnerabilidades-do-ftp/blob/main/pictures/Capturar.PNG">Máquina servidor</a><br>
+<a href="https://github.com/GuilhermeNobrega/Vulnerabilidades-do-ftp/blob/main/pictures/Capturar1.PNG">Máquina cliente que faz conexão</a>
 
-<p align="center">
-<img src="https://pa1.narvii.com/6565/853c9e5856133a921e36ae9fc01d1f05abde7709_00.gif" height="100" width="100">
+2. **Visualização dados wireshark!**:
+   Em seu wireshark, abra o arquivo pcap e veja os pacotes (tcp e ftp se tiver ftp-data caso queira dar um get em algo no servidor para baixar em sua máquina local)
